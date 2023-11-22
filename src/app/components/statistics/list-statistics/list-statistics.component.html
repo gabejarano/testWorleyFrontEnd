@@ -1,1 +1,46 @@
-<p>list-statistics works!</p>
+<div class="statistics-container">
+    <h2>Estadísticas</h2>
+
+    <!-- Filtros -->
+    <div class="filters">
+        <div class="filter-item">
+            <label for="filter1">Filtro 1:</label>
+            <input type="text" id="filter1" [(ngModel)]="filter1" placeholder="Ingrese filtro 1">
+        </div>
+        <div class="filter-item">
+            <label for="filter2">Filtro 2:</label>
+            <input type="text" id="filter2" [(ngModel)]="filter2" placeholder="Ingrese filtro 2">
+        </div>
+        <div class="filter-item">
+            <label for="filter3">Filtro 3:</label>
+            <input type="text" id="filter3" [(ngModel)]="filter3" placeholder="Ingrese filtro 3">
+        </div>
+        <div class="filter-item">
+            <label for="filter4">Filtro 4:</label>
+            <input type="number" id="filter4" [(ngModel)]="filter4" placeholder="Ingrese filtro 4">
+        </div>
+        <button class="filter-button" (click)="applyFilters()">Filtrar</button>
+    </div>
+
+    <!-- Tabla de Estadísticas -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Filtro 1</th>
+                <th>Filtro 2</th>
+                <th>Filtro 3</th>
+                <th>Filtro 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let statistic of statistics">
+                <td>{{ statistic.id }}</td>
+                <td>{{ statistic.filtro1 }}</td>
+                <td>{{ statistic.filtro2 }}</td>
+                <td>{{ statistic.filtro3 }}</td>
+                <td>{{ statistic.filtro4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

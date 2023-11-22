@@ -12,7 +12,7 @@ export class UsersService {
 
 
   signin(login: any): Observable<any> {
-    return this.http.post<any>(`localhost:4000/api/login`, login)
+    return this.http.post<any>(`http://localhost:4000/api/login`, login)
       .pipe(
         tap(loginResponse => {
           this.tokenService.saveToken(loginResponse.token);
@@ -21,6 +21,6 @@ export class UsersService {
   }
 
   signUp(signup: any): Observable<any> {
-    return this.http.post<any>(`localhost:4000/api/signup`, signup)
+    return this.http.post<any>(`http://localhost:4000/api/signup`, signup)
   }
 }
