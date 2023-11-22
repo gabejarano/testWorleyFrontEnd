@@ -1,1 +1,23 @@
-<p>signup works!</p>
+<div class="signup-container">
+    <div class="signup-content">
+        <h2>Crear cuenta</h2>
+        <form (submit)="signupUser()">
+            <div class="form-group">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" [(ngModel)]="signupEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Contraseña:</label>
+                <input type="password" id="signup-password" name="signup-password" [(ngModel)]="signupPassword"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Repetir Contraseña:</label>
+                <input type="password" id="confirm-password" name="confirm-password" [(ngModel)]="confirmPassword"
+                    required>
+            </div>
+            <button type="submit">Signup</button>
+        </form>
+        <p class="login-link">¿Ya tienes una cuenta? <a routerLink="/login">Iniciar sesión</a></p>
+    </div>
+</div>

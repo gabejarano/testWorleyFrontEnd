@@ -5,6 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
-export class SignupComponent {
+export class SignupComponent  {
+
+  signupEmail:string = "signupEmail";
+  signupPassword:string = "signupPassword";
+  confirmPassword:string = "confirmPassword"
+
+  signupUser(){
+
+  }
 
 }
